@@ -20,6 +20,9 @@ setup(
     classifiers=[
         "Framework :: Django",
         "Programming Language :: Python :: 3",
-        "Operating System :: OS Independent",
+        "Operating System :: OS Ind ependent",
     ],
 )
+
+
+
