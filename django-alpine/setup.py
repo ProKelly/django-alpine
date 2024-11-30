@@ -6,13 +6,14 @@ def parse_requirements(filename):
     if os.path.exists(filename):
         with open(filename, "r") as file:
             return [line.strip() for line in file if line.strip() and not line.startswith("#")]
+    print("No requirements found")
     return []
 
 setup(
     name="django-alpine",
     version="0.1.1",
     description="A Django app for integrating Alpine.js into your project.",
-    license="BSD 3-Clause",
+    license="BSD",
     long_description=open("README.rst").read(),
     long_description_content_type="text/x-rst",
     author="Anye Prince Kelly",
@@ -28,5 +29,6 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3 :: Only",
         "Operating System :: OS Independent",
+        "License :: OSI Approved :: BSD License",
     ],
 )
