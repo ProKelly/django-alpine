@@ -37,3 +37,6 @@ classifiers = [
 
 [project.urls]
 Repository = "https://github.com/ProKelly/django-alpine.git"
+
+[project.dynamic]
+license = ["BSD"]
