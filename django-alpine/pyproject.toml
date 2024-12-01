@@ -5,6 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "django-alpine"
 version = "0.1.1"
+dependencies = [
+    "django>=5.1", 
+    "requests>=2.25",
+]
 description = "A Django package to include alpine.js to your django project."
 readme = "README.rst"
 requires-python = ">= 3.10"
@@ -31,9 +35,6 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
-
-[project.dynamic]
-license = ["BSD"]
 
 [project.urls]
 Repository = "https://github.com/ProKelly/django-alpine.git"

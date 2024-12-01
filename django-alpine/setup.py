@@ -13,7 +13,6 @@ setup(
     name="django-alpine",
     version="0.1.1",
     description="A Django app for integrating Alpine.js into your project.",
-    license="BSD",
     long_description=open("README.rst").read(),
     long_description_content_type="text/x-rst",
     author="Anye Prince Kelly",
@@ -29,6 +28,5 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3 :: Only",
         "Operating System :: OS Independent",
-        "License :: OSI Approved :: BSD License",
     ],
 )
