@@ -52,7 +52,7 @@ def parse_requirements(filename):
 
 setup(
     name="django-alpine",
-    version="0.1.1",
+    version="0.1.4",
     description="A Django app for integrating Alpine.js into your project.",
     long_description=open("README.rst").read(),
     long_description_content_type="text/x-rst",
@@ -65,7 +65,7 @@ setup(
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
-        "Framework :: Django :: 5.1.3",
+        "Framework :: Django :: 4.2",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3 :: Only",
         "Operating System :: OS Independent",

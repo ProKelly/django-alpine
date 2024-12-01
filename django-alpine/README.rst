@@ -21,7 +21,7 @@ Installation
 Ensure your environment meets the following requirements:
 
 - **Python**: 3.10 or higher
-- **Django**: 5.1.3 or higher
+- **Django**: 4.2 or higher
 
 ### Steps
 
