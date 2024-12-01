@@ -103,10 +103,3 @@ Created and maintained by **Anye Prince Kelly**.
 - [Alpine.js Documentation](https://alpinejs.dev/)
 - [GitHub Repository](https://github.com/ProKelly/django-alpine)
 
-  
-### Key Adjustments:
-- Used Markdown syntax (`#` for headers, `*` for lists, etc.).
-- Adjusted inline links and code blocks for compatibility with Markdown format.
-- Ensured proper formatting for sections like **Installation**, **Usage**, and **License**.
-
-Feel free to edit or add more details specific to your project!
