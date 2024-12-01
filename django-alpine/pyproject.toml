@@ -38,3 +38,6 @@ classifiers = [
 
 [project.urls]
 Repository = "https://github.com/ProKelly/django-alpine.git"
+
+[tool.setuptools.package-data]
+django_alpine = ["static/js/alpine.js"]
