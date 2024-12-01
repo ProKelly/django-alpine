@@ -1,6 +1,3 @@
-Below is a sample `README.md` file version for your `django-alpine` project, converted from `.rst` to Markdown format:
-
-```markdown
 # django-alpine
 
 A Django package to easily include [Alpine.js](https://pypi.org/project/django-alpine/) in your Django project.
@@ -105,10 +102,8 @@ Created and maintained by **Anye Prince Kelly**.
 
 - [Alpine.js Documentation](https://alpinejs.dev/)
 - [GitHub Repository](https://github.com/ProKelly/django-alpine)
-```
 
----
-
+  
 ### Key Adjustments:
 - Used Markdown syntax (`#` for headers, `*` for lists, etc.).
 - Adjusted inline links and code blocks for compatibility with Markdown format.
