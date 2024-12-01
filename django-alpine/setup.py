@@ -1,12 +1,53 @@
 import os
+import shutil
+import requests
 from setuptools import setup, find_packages
+from setuptools.command.install import install
 
-# Read requirements from the requirements.txt file
+class PostInstallCommand(install):
+    """Post-installation script to download Alpine.js."""
+
+    def run(self):
+        super().run()
+
+        # Define paths
+        static_dir = os.path.join(os.getcwd(), "static", "js")
+        packaged_alpine_path = os.path.join(os.path.dirname(__file__), "django_alpine", "static", "js", "alpine.js")
+        alpine_js_path = os.path.join(static_dir, "alpine.js")
+        os.makedirs(static_dir, exist_ok=True)
+
+        # Copy the pre-packaged Alpine.js file
+        self.copy_packaged_alpine(packaged_alpine_path, alpine_js_path)
+
+        # Attempt to download the latest Alpine.js
+        self.download_alpine(alpine_js_path)
+
+    @staticmethod
+    def copy_packaged_alpine(source_path, destination_path):
+        try:
+            shutil.copy(source_path, destination_path)
+            print(f"Packaged Alpine.js installed to {destination_path}.")
+        except Exception as e:
+            print(f"Failed to copy packaged Alpine.js: {e}")
+
+    @staticmethod
+    def download_alpine(file_path):
+        url = "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+        try:
+            print("Attempting to download latest version of Alpine.js...")
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            with open(file_path, "wb") as file:
+                file.write(response.content)
+            print(f"Alpine.js successfully downloaded to {file_path}.")
+        except requests.RequestException as e:
+            print(f"Failed to download Alpine.js: {e}. Using the pre-packaged version.")
+
+# Parse requirements
 def parse_requirements(filename):
     if os.path.exists(filename):
         with open(filename, "r") as file:
             return [line.strip() for line in file if line.strip() and not line.startswith("#")]
-    print("No requirements found")
     return []
 
 setup(
@@ -29,4 +70,7 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
         "Operating System :: OS Independent",
     ],
+    cmdclass={
+        "install": PostInstallCommand,
+    },
 )
