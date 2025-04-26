@@ -97,6 +97,7 @@ Created and maintained by **Anye Prince Kelly**.
 
 - Email: [firstanye@gmail.com](mailto:firstanye@gmail.com)
 - GitHub: [ProKelly](https://github.com/ProKelly)
+- Linkedin: [Anye Prince Kelly](https://www.linkedin.com/in/anyeprince/)
 
 ## Links
 
